@@ -57,11 +57,6 @@ def eliminar():
     consulta = "DELETE FROM departamento WHERE numdep = %s"
     cursor.execute(consulta, (codigo,))    
     conexion.commit()  # Confirmar los cambios
-    if cursor.rowcount > 0:
-        print(f"Departamento con código {codigo} eliminado exitosamente.")
-    else:
-        print(f"No se encontró un departamento con el código {codigo}.")
-    
     cursor.close()
 
 
